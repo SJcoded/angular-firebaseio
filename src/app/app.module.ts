@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { BiggerDirective } from './bigger.directive';
+import { ColourPipe } from './colour.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    BiggerDirective,
+    ColourPipe
   ],
   imports: [
     BrowserModule,

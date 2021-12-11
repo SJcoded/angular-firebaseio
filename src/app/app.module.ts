@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { BiggerDirective } from './bigger.directive';
 import { ColourPipe } from './colour.pipe';
 import { FirstLookComponent } from './first-look/first-look.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FirstLookComponent } from './first-look/first-look.component';
     HomeComponent,
     BiggerDirective,
     ColourPipe,
-    FirstLookComponent
+    FirstLookComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

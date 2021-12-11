@@ -1,5 +1,6 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit, Input } from '@angular/core';
 import { VERSION } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-home',
@@ -12,12 +13,20 @@ export class HomeComponent implements DoCheck {
   clicked = false;
   title = `Angular ${VERSION.full} is a weird version`;
   colour = 'red';
+  message = 'definitely just a face'
 
   me = {
     name: 'SJ Triffon',
     title: 'Software Engineer',
     email: 'who@sjcoded.com',
   }
+
+  recieveMessage($event: string) {
+    this.message = $event;
+  }
+
+
+
 
   changeColour() {
     this.colour = this.colour === 'red' ? 'green' : 'red';

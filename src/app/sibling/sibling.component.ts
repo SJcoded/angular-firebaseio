@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../inject/data.service';
 
+
 @Component({
-  selector: 'app-first-look',
-  templateUrl: './first-look.component.html',
-  styleUrls: ['./first-look.component.scss']
+  selector: 'app-sibling',
+  templateUrl: './sibling.component.html',
+  styleUrls: ['./sibling.component.scss']
 })
-export class FirstLookComponent implements OnInit {
+export class SiblingComponent implements OnInit {
+
 
   message = '';
 
@@ -14,6 +16,10 @@ export class FirstLookComponent implements OnInit {
 
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message => this.message = message);
+  }
+
+  updateMessage(message: string) {
+    this.data.changeMessage(message);
   }
 
 }

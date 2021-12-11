@@ -10,13 +10,46 @@
 @include mat.core();
 
 //generated new palette (here) [http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5&mcgpalette1=%23da0000]
+$custom-red: (
+    50 : #fbe0e0,
+    100 : #f4b3b3,
+    200 : #ed8080,
+    300 : #e54d4d,
+    400 : #e02626,
+    500 : #da0000,
+    600 : #d60000,
+    700 : #d00000,
+    800 : #cb0000,
+    900 : #c20000,
+    A100 : #ffebeb,
+    A200 : #ffb8b8,
+    A400 : #ff8585,
+    A700 : #ff6b6b,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
 
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$firebaseio-tut-primary: mat.define-palette(mat.$deep-purple-palette, A100, A200);
-$firebaseio-tut-accent: mat.define-palette(mat.$green-palette, A200);
+$firebaseio-tut-primary: mat.define-palette($custom-red, 700, 500, 300);
+$firebaseio-tut-accent: mat.define-palette(mat.$blue-palette, A400, A200, A700);
 
 // The warn palette is optional (defaults to red).
 $firebaseio-tut-warn: mat.define-palette(mat.$red-palette);

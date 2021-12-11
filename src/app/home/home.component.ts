@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { VERSION } from '@angular/compiler';
 
 @Component({
@@ -6,10 +6,18 @@ import { VERSION } from '@angular/compiler';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements DoCheck {
+
+
   clicked = false;
   title = `Angular ${VERSION.full} is a weird version`;
   colour = 'red';
+
+  me = {
+    name: 'SJ Triffon',
+    title: 'Software Engineer',
+    email: 'who@sjcoded.com',
+  }
 
   changeColour() {
     this.colour = this.colour === 'red' ? 'green' : 'red';
@@ -18,4 +26,9 @@ export class HomeComponent {
   handleClick() {
     this.clicked = !this.clicked;
   }
+
+  ngDoCheck() {
+    console.log('DoCheck');
+  }
+
 }

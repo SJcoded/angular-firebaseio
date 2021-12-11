@@ -14,6 +14,21 @@
     style="width: 100px; height: 100px; border: 1px solid black;"
     appBigger
 >
+</div>
 
+
+<div *ngIf="clicked">
+    <h2 [ngClass]="{
+        'green': colour === 'green',
+        'red': colour === 'red'
+    }">
+        {{me.name}}
+    </h2>
+    <p>
+        {{me.title}}
+    </p>
+    <p>
+        {{me.email}}
+    </p>
 
 </div>

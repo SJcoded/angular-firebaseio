@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "scholarmode-projects": {
+      "hosting": {
+        "firebaseio-tut": [
+          "scholarmode-projects"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "scholarmode-projects"
+  }
+}

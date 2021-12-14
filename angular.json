@@ -112,6 +112,16 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "firebaseio-tut:build:production",
+            "firebaseProject": "scholarmode-projects",
+            "firebaseHostingSite": "scholarmode-projects"
+          }
         }
       }
     }
